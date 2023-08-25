@@ -11,10 +11,17 @@ const Feed = () => {
 
   useEffect(() =>
      {
-        fetchFromAPI(`search?part=snippet&q=$
-        {selectedCategory}`)
-          .then((data) => setVideos(data.items)) 
+       console.log(selectedCategory);
+       
+        fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
+          .then((data) => {
+            setVideos(data.items)
+           console.log(data)
+          }) 
+          
       },[selectedCategory])
+
+  
  
   return (
     <Stack
@@ -24,7 +31,7 @@ const Feed = () => {
           <SideBar 
              selectedCategory = {selectedCategory}
              setSelectedCategory = {setSelectedCategory}
-          />
+          />   
 
           <Typography className='copyright' variant='body2' sx={{mt:1.5,color:'#fff'}}>
             copyright 2023 Balaguru
