@@ -6,6 +6,8 @@ import { CheckCircleOutline, TypeSpecimen } from '@mui/icons-material'
 import { demoThumbnailUrl, demoChannelTitle, demoVideoTitle, demoVideoUrl, demoChannelUrl } from '../utils/constant'
 
 const VideoCard = ({video :{id: {videoId},snippet}}) => {
+
+   console.log(videoId)
   
   return (
      <Card sx={{width:{md:'320px', xs:'100%'},boxShadow:'none', borderRadius:0}}>
