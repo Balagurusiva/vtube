@@ -4,7 +4,7 @@ import { VideoCard, ChannelCard } from './index'
 
 const Video = ({videos}) => {
  
-  console.log(videos)
+ 
   return (
     <Stack direction='row' flexWrap='wrap' justifyContent='start' gap={2}>
         
