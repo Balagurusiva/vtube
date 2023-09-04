@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Typography, Card, CardMedia, CardContent } from '@mui/material'
-import { CheckCircleOutline, TypeSpecimen } from '@mui/icons-material'
+import { CheckCircleOutline } from '@mui/icons-material'
 
-import { demoThumbnailUrl, demoChannelTitle, demoVideoTitle, demoVideoUrl, demoChannelUrl } from '../utils/constant'
+ 
+import { demoVideoUrl, demoVideoTitle, demoChannelUrl, demoChannelTitle } from "../utils/constant";
 
 const VideoCard = ({video :{id: {videoId},snippet}}) => {
-
-   console.log(videoId)
+ 
   
   return (
      <Card sx={{width:{  xs: '100%', sm: '358px', md: "320px",},boxShadow:'none', borderRadius:0}}>
@@ -22,7 +22,7 @@ const VideoCard = ({video :{id: {videoId},snippet}}) => {
                 </Link>
                <Link to ={snippet?.channelId ? `/channel/${snippet?.chennalId}` : demoChannelUrl}>
                   <Typography varient="subtitle2" color='gray' fontWeight='bold'>
-                     {snippet?.chennalTitle || demoChannelTitle}
+                     {snippet?.channelTitle || demoChannelTitle}
                      <CheckCircleOutline  sx={{FontSize:12, color:'gray', ml:'5px',mb:'-5px'}}/>
                   </Typography>
                </Link>
