@@ -8,7 +8,7 @@ This project was deployed on netlify : [Vtube](https://v-tubes.netlify.app/).
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project  directory, you can run:
 
 ### `npm start`
 
